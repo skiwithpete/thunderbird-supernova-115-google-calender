@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Open Google Calendar",
+  "version": "1.0",
+  "description": "Adds a button to open Google Calendar in a tab.",
+  "permissions": [
+    "tabs"
+  ],
+  "icons": {
+    "48": "icons/icon3.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon3.png",
+    "default_title": "Google Calendar"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
